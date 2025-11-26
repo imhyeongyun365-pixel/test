@@ -83,9 +83,12 @@
                 </div>
             </div>
           </div>
+          <!-- 메인이미지 -->
+         <div class="mainimage_container">
           <div class="mainimage">
             <img src="mainimage/main_slide/mainVisual-rev2.png">
           </div>
+         </div>
         </div>
 
         <!-- 카드부분 -->
@@ -332,7 +335,7 @@
             </div>
         </div>
       </div>
-
+      <!-- 수료생 인터뷰 -->
       <div class="student_interview_container">
         <div class="student_interview">
             <div class="title">
@@ -375,7 +378,7 @@
                 <p class="portfolio_maintitle">수강생 포트폴리오</p>
             </div>
             <div class="portfolio_layout">
-                <article>
+                <article class="portfolio_layout_article">
                     <div class="portfolio_card">
                         <div class="portfolio_image">
                             <img src="mainimage\portfolio\hrmanage-inventoymanaga-4.png">
@@ -1129,32 +1132,46 @@
     border-radius: 50%;
 }
 
-.mainimage {
-    width: 1653px;
-    height: 600px;
-    width: 100%;
+@media (max-width: 1100px) {
+.rightmenu {
+    display: none;
+}
+}
+
+@media (max-width: 1100px) {
+.top-menu2 .mainmenu {
+    display: none;
+}
+}
+
+/* 메인이미지 */
+
+.mainimage_container {
     background-color: #0a0a0a;
+    width: 100%;
+}
+
+.mainimage {
+    object-fit: cover;
+    width: 100%;
+    max-width: 1653px;
+    max-height: 600px;
+    margin: 0 auto;
 }
 
 .mainimage img {
-    display: block;
-    width: 1345px;
     width: 100%;
-    height: 600px;
-    object-fit: cover;
-    margin: auto;
 }
 
 /* 카드부분 */
 
 .second_screen {
     width: 100%;
-    padding-top: 80px;
 }
+
 
 .card_group {
     display: flex;
-    flex-direction: column;
     align-items: center;
     user-select: none;
     justify-content: space-between;
@@ -1163,15 +1180,27 @@
     gap: 100px;
 }
 
+@media (max-width: 1222px) {
+.second_screen .card_group {
+    flex-direction: column;
+    align-items: center;
+    gap: 100px;
+}
+}
+
 /*article, card1 */
 .card1 {
     perspective: 1400px;
     border-radius: 10px;
     width: 397px;
     height: 497px;
-    transform: width .22s cubic-bezier(.2,.8,.2,1),filter .22s cubic-bezier(.2,.8,.2,1)
+    transition: width .22s cubic-bezier(.2,.8,.2,1),filter .22s cubic-bezier(.2,.8,.2,1)
     ,margin .22s cubic-bezier(.2,.8,.2,1),opacity .22s cubic-bezier(.2,.8,.2,1);
     position: relative;
+}
+
+.second_screen .visible {
+    
 }
 
 .card1:hover {
@@ -1189,6 +1218,10 @@
     transform-style: preserve-3d;
     transition: transform .22s cubic-bezier(.2, .8, .2, 1);
     position: relative;
+}
+
+.second_screen .card1:hover .card1_inner {
+    transform: rotateY(180deg);
 }
 
 .card1_info_front {
@@ -1262,7 +1295,7 @@
     border-radius: 10px;
     width: 397px;
     height: 497px;
-    transform: width .22s cubic-bezier(.2,.8,.2,1),filter .22s cubic-bezier(.2,.8,.2,1)
+    transition: width .22s cubic-bezier(.2,.8,.2,1),filter .22s cubic-bezier(.2,.8,.2,1)
     ,margin .22s cubic-bezier(.2,.8,.2,1),opacity .22s cubic-bezier(.2,.8,.2,1);
     position: relative;
 }
@@ -1282,6 +1315,10 @@
     filter:saturate(2);
     z-index: 1000;
     width: 100vw;
+}
+
+.second_screen .card2:hover .card2_inner {
+    transform: rotateY(180deg);
 }
 
 .card2_info_front {
@@ -1356,7 +1393,7 @@
     border-radius: 10px;
     width: 397px;
     height: 497px;
-    transform: width .22s cubic-bezier(.2,.8,.2,1),filter .22s cubic-bezier(.2,.8,.2,1)
+    transition: width .22s cubic-bezier(.2,.8,.2,1),filter .22s cubic-bezier(.2,.8,.2,1)
     ,margin .22s cubic-bezier(.2,.8,.2,1),opacity .22s cubic-bezier(.2,.8,.2,1);
     position: relative;
 }
@@ -1376,6 +1413,10 @@
     filter:saturate(2);
     z-index: 1000;
     width: 100vw;
+}
+
+.second_screen .card3:hover .card3_inner {
+    transform: rotateY(180deg);
 }
 
 .card3_info_front {
@@ -1593,8 +1634,7 @@
 }
 /* 수료생 인터뷰 */
 .student_interview_container {
-    width: 1275px;
-    height: 664px;
+    
     padding: 100px 8px;
     font-family: Noto Sans KR;
 }
@@ -1661,6 +1701,26 @@
     color: #676767;
 }
 
+
+
+@media (max-width: 1287px) {
+.student_interview_container .interview_layout article {
+    justify-content: space-around;
+}
+}
+
+@media (max-width:1287px) {
+.student_interview_container .subtitle {
+    text-align: center;
+}
+}
+
+@media (max-width:1287px) {
+.student_interview_container .maintitle {
+    text-align: center;
+}
+}
+
 /* 수강생 포트폴리오 */
 .portfolio_container {
     width: 1275px;
@@ -1693,7 +1753,7 @@
 }
 
 /* 포트폴리오 카드 */
-.portfolio_layout article {
+.portfolio_layout_article {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
@@ -1740,6 +1800,25 @@
     color: #676767;
 }
 
+@media (max-width:1287px) {
+.portfolio_container .portfolio_subtitle {
+    text-align: center;
+}
+}
+
+@media (max-width:1287px) {
+.portfolio_container .portfolio_maintitle {
+    text-align: center;
+}
+}
+
+@media (max-width: 1238px) {
+.portfolio_layout_article {
+    justify-content: space-around;
+}
+}
+
+/* 강사진 소개 */
 .instructor_introduction_container {
     margin: 0 auto;
     padding: 100px 8px;
@@ -1830,6 +1909,8 @@
     display: block;
 }
 
+/* 수료생 취업현황 */
+
 .student_employment_status_container  {
     justify-content: space-around;
     margin: 0 auto;
@@ -1916,6 +1997,20 @@
     position: relative;
 }
 
+@media (max-width:1016px) {
+.student_employment_status_container .student_employment_status_layout {
+    display: flex;
+    justify-content: space-around;
+} 
+}
+
+@media (max-width:1016px) {
+.student_employment_status_container .student_employment_status_ticker {
+    width: auto;
+    max-width: 314px;
+} 
+}
+
 /*언론보도*/
 .press {
     padding: 100px 8px;
@@ -1924,15 +2019,12 @@
 
 .press_container {
     display: flex;
-    flex-direction: column;
     justify-content: space-between;
     max-width: 1283px;
     margin: 0 auto;
-    gap: 45px;
 }
 
 .press_title {
-    text-align: center;
     display: flex;
     flex-direction: column;
     flex: 1;
@@ -1980,6 +2072,19 @@
     text-align: right;
 }
 
+@media (max-width:1200px) {
+.press .press_container {
+    flex-direction: column;
+    gap: 45px;
+}    
+}
+
+@media (max-width: 1200px) {
+.press .press_title {
+    text-align: center;
+}    
+}
+
 /* 수상내역 */
 .award {
     padding: 100px 8px;
@@ -2025,7 +2130,7 @@
 .award_details:hover {
     transition: transform 0.3s; 
     transform: translatex(-2268px);
-}
+} 
 
 .award_card {
     display: flex;
@@ -2055,6 +2160,18 @@
 .award_date {
     color: #676767;
     font-size: 14px;
+}
+
+@media (max-width: 1200px) {
+.award .award_container {
+    flex-direction: column;
+}    
+}
+
+@media (max-width:1200px) {
+.award_title1 {
+    text-align: center;
+}
 }
 
 /* footer */
@@ -2146,17 +2263,63 @@
     width: 31px;
     height: 31px;
 }
+
+@media (max-width: 1328px) {
+.footer_container {
+    margin: 0 auto;
+}
+}
+
+@media (max-width:970px) {
+.footer_inner {
+    gap: 10px;
+    flex-direction: column;
+    align-items: center;
+}
+}
+
+@media (max-width: 970px) {
+.top_left .top_right {
+    width: 100%;
+    align-items: center;
+    display: flex;
+    gap: 15px;
+}
+}
+
+@media (max-width: 1200px) {
+.footer span {
+    word-break: keep-all;
+}
+}
+
+@media (max-width: 970px) {
+.bottom_left {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+}
+}
+
+@media (max-width: 970px) {
+.bottom_right {
+    width: 100%;
+    justify-content: flex-start;
+}
+}
 </style>
 
 <!-- footer까지 완성. 
 
             **아직 다 구현하지 못한 부분**
     - 상단 오른쪽 돋보기 아이콘 미완성 
-    - 카드부분에 180도 돌아가는 애니메이션 미완성
+    - AI X 부분에 한 카드를 180도 돌리면 옆에 있는 다른 카드들이 사라지는 화면 미완성 
     - 각 파트별 제목과 부제목 사이 간격이 멀어져있는 모습
+    - 포트폴리오 카드부분에 화면을 줄이면 중앙에 모이지 않는 반응형 화면 미완성
     - 강사진 소개부분에서 직업 포트와 이름 포트가 서로 멀리 떨어져있는 모습
     - 수료생 취업현황에서 자동으로 위로 올라가는 애니메이션 미완성
-    - 수상내역에서 마우스로 탭을 당기는 애니메이션 미완성
+    - 수상내역에서 마우스로 탭을 당기면 움직이는 애니메이션 미완성
+    - 수상내역 카드부분에 파란왕관 이모티콘 미완성
 
     최대한 openAI 도움없이 만들어보았고, 정말 진전이 없고 안되는 부분만 openAI를 사용하였습니다.
     개발자 코드를 보면서 만들긴 했지만, 웹사이트를 만드는 연습 하는데에 큰 도움이 되어서 좋았습니다.
