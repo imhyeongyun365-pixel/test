@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div class="outer-container">
+        <!-- 첫 번째 레이아웃 -->
+        <div class="first_layout">
+            <div class="first_layout_header">
+                <div class="first_layout_topmenu">
+                    <ul>
+                        <li>
+                            <a>과정소개</a>
+                        </li>
+                        <li>
+                            <a>커리큘럼</a>
+                        </li>
+                        <li>
+                            <a>과정평가형 장점</a>
+                        </li>
+                        <li>
+                            <a>취업지원</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="first_layout_main_screen">
+                <p class="first_layout_main_screen_title">
+                    <span>저지르지 않으면</span>
+                    <br>
+                    <span>아무일도 안일어나</span>
+                </p>
+                <div class="first_layout_main_screen_font-background_image">
+                    <img src="image\first_layout\v405_3656.png" width="839" height="485">
+                </div>
+                <div class="first_layout_main_screen_background_image">
+                    <img src="image\first_layout\v405_3658.png" width="331" height="331">
+                </div>
+                <span class="first_layout_main_screen_subtitle">
+                    <i>과정평가형 마지막 무료 교육</i>
+                </span>
+            </div>
+        </div>
+
+        <!-- 두 번째 레이아웃 -->
+        <div class="second_layout">
+            <div class="second_layout_content">
+                <div class="second_layout_leftinfo">
+                    <p class="second_layout_leftinfo_keyword">
+                        필기NO,학력NO.
+                        <br>
+                        실력만으로 국가자격증 따는
+                        <br>
+                        가장 빠른 루트
+                    </p>
+                    <p class="second_layout_leftinfo_subkeyword">
+                        과정평가형은 기존의 '필기 + 실기'만으로 평가하는 검정형 시험과 달리,
+                        <br>
+                        정해진 교육과정을 충실히 이수하며 내부·외부 평가를 통해 자격증을 취득
+                        <br>
+                        하는 제도입니다.
+                    </p>
+                    <div class="second_layout_leftinfo_labels">
+                        <span>
+                        <p class="second_layout_leftinfo_label_info">프로그래밍 언어 학습</p>
+                        <p class="second_layout_leftinfo_label_info">시스템 분석·설계</p>
+                        </span>
+                        <br>
+                        <span>
+                        <p class="second_layout_leftinfo_label_info">데이터 관리 실습</p>
+                        <p class="second_layout_leftinfo_label_info">프로젝트 중심 학습</p>
+                        </span>
+                    </div>
+                    <p class="second_layout_leftinfo_beneficial_effects">
+                        <span class="second_layout_leftinfo_beneficial_effects_info">
+                            취업 경쟁력 강화 자격증 + 실무 포트롤리오로 기업이 원하는 IT 기반 역량
+                        </span>
+                    </p>
+                </div>
+                <div class="second_layout_rightinfo">
+                    <div class="second_layout_right_image">
+                        <div class="second_layout_right_image_human">
+                    <img src="image\second_layout\v405_3647.png" width="371" height="361">
+                        </div>
+                        <div class="second_layout_right_image_circle">
+                    <img src="image\second_layout\blue_circle.png" width="381" height="381">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
+
+<style>
+
+@font-face {
+   font-family: 'Yeongwol';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/2507-2@1.0/YeongwolTTF-Regular.woff2') format('woff2');
+    font-weight: normal;
+    font-display: swap;
+}
+
+.outer-container {
+    width: 100%;
+    background-color: #000000;
+}
+
+.first_layout {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 814px;
+
+}
+
+.first_layout_header {
+    display: flex;
+    height: 100px;
+}
+
+.first_layout_topmenu {
+    display: flex;
+    justify-content: right;
+    width: 100%;
+    height: 50px;
+    padding-top: 25px;
+    margin-right: 450px;
+}
+
+.first_layout_topmenu ul {
+    display: flex;
+    list-style: none;
+    margin: 0;
+    gap: 50px;
+    height: 25px;
+}
+
+.first_layout_topmenu a {
+    color: #fff;
+    font-size: 23px;
+    font-weight: 300;
+}
+
+
+
+.first_layout_main_screen {
+    display: flex;
+    flex-direction: column;
+    max-width: 983px;
+    max-height: 528px;
+    margin: 0 auto;
+    margin-top: 70px;
+    padding-left: 200px;
+    position: relative;
+}
+
+.first_layout_main_screen_title {
+    color: #fff;
+    padding-left: 95px;
+    padding-top: 70px;
+    position: absolute;
+    z-index: 3;
+}
+
+.first_layout_main_screen_title span {
+    font-size: 125px;
+    font-weight: 400;
+    font-family: 'Yeongwol';
+}
+
+.first_layout_main_screen_font-background_image {
+    position: absolute;
+    z-index: 2;
+}
+
+.first_layout_main_screen_background_image {
+    margin-left: 570px;
+    margin-top: 150px;
+
+}
+
+.first_layout_main_screen_subtitle { 
+   position: absolute;
+   z-index: 1;
+   margin-left: 300px;
+   padding-top: 420px;
+}
+
+.first_layout_main_screen_subtitle i {
+    color: #fff;
+    font-style: initial;
+    font-size: 20px;
+}
+
+/* 두번 째 레이아웃 */
+
+.second_layout {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 1050px;
+}
+
+.second_layout_content {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+}
+
+.second_layout_leftinfo {
+    display: flex;
+    flex-direction: column;
+    max-width: 920px;
+    position: relative;
+}
+
+.second_layout_leftinfo_keyword {
+    color: #fff;
+    font-size: 80px;
+    font-weight: 800;
+    
+}
+
+.second_layout_leftinfo_subkeyword {
+    color: #fff;
+    font-size: 28px;
+    font-weight: 100;
+    
+    
+}
+
+
+.second_layout_leftinfo_labels {
+    display: flex;
+    color: #fff;
+    gap: 10px;
+}
+
+.second_layout_leftinfo_label_info {
+    font-size: 23px;
+    box-sizing: border-box;
+    border-radius: 30px;
+    background-color: #058AF8;
+    text-align: center;
+    padding: 10px;
+    width: 230px;    
+}
+
+.second_layout_leftinfo_beneficial_effects {
+    color: #fff;
+}
+
+.second_layout_leftinfo_beneficial_effects_info {
+    font-size: 28px;
+    font-weight: 100;
+}
+
+.second_layout_rightinfo {
+    position: relative;
+}
+
+.second_layout_rightinfo_image {
+    display: flex;
+    position: relative;
+}
+
+.second_layout_right_image_human {
+    position: absolute;
+    padding-top: 300px;
+}
+
+.second_layout_right_image_circle {
+    padding-top: 270px;
+}
+</style>
+
+<!-- 두 번째 레이아웃 기본 화면까지 완성 -->
